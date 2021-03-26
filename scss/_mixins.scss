@@ -1,0 +1,16 @@
+/// Width & height of a block
+/// If only one parameter is provided, it's a square !
+/// @param {Length} $width
+/// @param {Length} $height
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+
+/// Center vertically & horizontally with flex
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

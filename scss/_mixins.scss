@@ -14,3 +14,9 @@
     justify-content: center;
     align-items: center;
 }
+
+/// Center vertically & horizontally with grid
+@mixin grid-center {
+    display: grid;
+    place-content: center;
+}

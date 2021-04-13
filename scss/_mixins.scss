@@ -20,3 +20,15 @@
     display: grid;
     place-content: center;
 }
+
+/// Center vertically 
+@mixin vert-center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/// Center horizontally 
+@mixin horiz-center {
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -1,7 +1,8 @@
-/// Width & height of a block
-/// If only one parameter is provided, it's a square !
-/// @param {Length} $width
-/// @param {Length} $height
+/** Width & height of a block
+* If only one parameter is provided, it's a square !
+* @param {Length} $width
+* @param {Length} $height
+**/
 @mixin size($width, $height: $width) {
     width: $width;
     height: $height;
@@ -32,3 +33,15 @@
     top: 50%;
     transform: translateY(-50%);
 }
+/**
+* Fill text with gradient :
+* $bg: linear-gradient(90deg, purple, orange, tomato);
+*  @include gradient-text($bg);
+**/
+@mixin gradient-text($bg) {
+    background-image: $bg;
+    // -webkit-background-clip: text; // AutoPrefixer can add this automatically
+    background-clip: text;
+    -webkit-text-fill-color: transparent; // non-standart, see https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-text-fill-color
+    color: transparent;
+  }

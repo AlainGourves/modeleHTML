@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/sty.css">
 </head>
+
 <body>
-    
-    <script src="./js/main.js"></script>
+    <div class="box">
+        <canvas width="512" height="512"></canvas>
+        <button id="reload">Reload</button>
+        <button id="download">Download</button>
+    </div>
+    <button id="flip">Flip image</button>
+    <button id="gray">Grayscale</button>
+    <label for="filters">Choose a filter:
+        <select name="filters" id="filters">
+            <option value="none">...</option>
+        </select>
+    </label>
+    <table id="matrixInputs">
+        <tr>
+            <td><input type="text" value=""></td>
+            <td><input type="text" value=""></td>
+            <td><input type="text" value=""></td>
+        </tr>
+        <tr>
+            <td><input type="text" value=""></td>
+            <td><input type="text" value=""></td>
+            <td><input type="text" value=""></td>
+        </tr>
+        <tr>
+            <td><input type="text" value=""></td>
+            <td><input type="text" value=""></td>
+            <td><input type="text" value=""></td>
+        </tr>
+    </table>
+    <button id="filter">Filter</button>
+    <button id="floyd">Floyd–Steinberg dithering</button>
+    <button id="atkinson">Atkinson dithering</button>
+
+    <canvas id="histogram__container"></canvas>
+    <script src="./js/main.js""></script>
 </body>
+
 </html>

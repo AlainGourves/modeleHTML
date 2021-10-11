@@ -19,20 +19,27 @@ html {
 body {
   background-color: var(--fondPage);
   min-height: 100vh;
-  @include flex-center;
+  @include grid-center;
 }
 
-img {
+img,
+canvas {
   display: block;
   max-width: 100%;
 }
 
-ul,
-nav ul {
-  list-style-type: none;
-}
+.box{
+  position: relative;
+  background: repeating-linear-gradient(45deg, purple, purple 10px, transparent 11px, transparent 20px);
 
-ul a {
-  text-decoration: none;
-  display: inline-block;
+  & #download,
+  & #reload {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: .5em;
+  }
+  & #reload {
+    left: 0;
+  }
 }
